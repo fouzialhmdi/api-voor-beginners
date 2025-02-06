@@ -1,4 +1,18 @@
+getData(myURL).then( dataImage => {
 
+let myAvatar = dataImage.data.avatar;
+
+let myImage = document.createElement("img");
+let myName = dataImage.data.name;
+myImage.src = myAvatar;
+myImage.alt = myName;
+
+console.log(myImage);
+
+let mySection = document.querySelector("section:nth-of-type(1)");
+mySection.append(myImage);
+
+})
 
 
 
